@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{listings}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Assignment 2}
+\author{Owen Bean}
+
+\begin{document}
+\maketitle
+
+Github: \href{https://github.com/owenbean400/COS470AssignmentTwo}{https://github.com/owenbean400/COS470AssignmentTwo}
+
+\section{Naïve Bayes classification Results}
+
+% Looking at models that work and did not work
+
+% canada is bad
+% California
+Looking at the model, the best model was gdpr due to the lowest amount for F1 score. There are very unique words for GDPR Stack Exchange compared to other subjects. The worse model is Calfornia. A lot of Calfornia test was falsely placed into United States. 
+
+% Results for the titles and bodies
+Looking at the F1 micro scores between the question titles, question bodies, and both question title and body; only the question titles has 0.25 rating compared to 0.15 for question body and combined question titles and bodies. Even looking through the diagonal of the chart for question titles had more correct placement of test than compared to question bodies and question title with bodies. Doing just the question titles shows improvement in effectiveness of classification. The reason is because the title question has more distinct key words for that specific subject, whereas the body may have words from separate subject.
+
+\section{Chat GPT}
+
+\textbf{The Question}: 
+Manually migrating this from here because the answers were unsatisfactory: \\
+\href{https://datascience.stackexchange.com/questions/26079/is-it-legal-to-scrape-youtube-videos-for-training-data}{https://datascience.stackexchange.com/questions/26079/is-it-legal-to-scrape-youtube-videos-for-training-data} \\
+
+Can a machine learning researcher scrape youtube or use youtube videos/snippets of youtube videos to train a model? Would this violate 1) the creator's copyrights, 2) google's distribution/use rights? \\
+
+This question does not concern datasets Google has freely released, but rather any other publicly available videos. \\
+
+\textbf{Chat GPT}:
+
+Scraping YouTube videos for training data can potentially raise copyright and legal concerns.
+
+YouTube's terms of service prohibit users from "accessing, reproducing, downloading, distributing, transmitting, broadcasting, displaying, selling, licensing, or otherwise exploiting any Content for any other purposes without the prior written consent of YouTube or the respective licensors of the Content." This means that scraping YouTube videos without permission from YouTube or the video creator could be considered a violation of their terms of service and potentially illegal.
+
+Furthermore, the content of the video itself may be protected by copyright law. Even if the video is publicly available, the creator still has the right to control how their work is used and distributed. If a researcher wants to use YouTube videos for training data, they should first obtain permission from both YouTube and the video creator.
+
+In summary, scraping YouTube videos for training data could potentially violate copyright law and YouTube's terms of service. Researchers should obtain permission from both YouTube and the video creator before using any YouTube videos for training data. \\
+
+\textbf{Answer}:
+
+The download/scrape would be a prima facie copyright infringement if the content is protected by copyright (most is) and not licenced for such use.
+
+This would be excused only if a fair use defence were established, which is a case-by-case assessment as described here: In the US, when is fair use a defense to copyright infringement?
+
+The fact that the intended use would be to train a machine-learning model would be just one of the factors in the fair use analysis (the purpose and character of use), but it is not determinative, other factors can pull the analysis in the opposite direction, and we are not better placed than you to make a prediction about the outcome of such a defence. \\
+
+\textbf{Analysis}:
+
+As a human looking at the answer and Chat GPT response, I would say the context of the answer does not match. Chat GPT talks about Youtube policies and how using scraping videos can violate the copyright law. The Stack Exchange answer talks about fair use and the potenital of the training could be considered fair use. Chat GPT tone was against using Youtube videos for training, while Stack Exchange is tone is hopeful.
+
+\end{document}
